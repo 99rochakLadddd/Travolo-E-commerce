@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="day25.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.cdnfonts.com/css/stroke" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/rosmatika" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- <------------------header-section-1-start------------------- -->
+
+    <header class="header-section-1 bg-dark">
+        <div class="container-fluid fluid-wala-container d-flex flex-wrap justify-content-between align-items-center">
+            <div class="contact-info p-3 fs-6">
+                <p class="contact-info-p mb-0">
+                    <i class="fa-solid fa-envelope p-2 me-2"></i> <span class="contact-email me-4 text-light">hikerz@store.com</span>
+                    <i class="contact-phone me-2 px-1"><lord-icon src="https://cdn.lordicon.com/srsgifqc.json" trigger="hover" colors="primary:#ff681b" style="width:23px;height:25px"></lord-icon></i> 
+                    <span class="contact-phone text-light">123-456-7890</span>
+                </p>
+            </div>
+            <div class="social-media d-flex text-light">
+                <p class="social-media-icons mt-3 fs-4 me-4">
+                    <i class="ri-facebook-fill"></i>
+                    <i class="ri-instagram-line ms-2"></i>
+                    <i class="ri-twitter-fill ms-2"></i>
+                    <i class="ri-youtube-fill ms-2"></i>
+                </p>
+
+                <div class="btn-group language-btn-div">
+                    <button type="button" class="btn dropdown-toggle fs-6 text-light" data-bs-toggle="dropdown" aria-expanded="false">
+                        English
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English (UK) 🇬🇧</a></li>
+                        <li><a class="dropdown-item" href="#">Nepali 🇳🇵</a></li>
+                        <li><a class="dropdown-item" href="#">Hindi 🇮🇳</a></li>
+                        <li><a class="dropdown-item" href="#">Arabic 🇦🇪</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">More</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown profile-btn-div bg-info me-2">
+                    <button class="btn dropdown-toggle profile-button p-3 " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ri-account-circle-fill fs-5"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" type="button"><i class="ri-login-box-line fs-5"></i> Login</a></li>
+                      <li><a class="dropdown-item" type="button"><i class="ri-logout-box-line fs-5"></i> Logout</a></li>
+                      <li><a class="dropdown-item" type="button"><i class="ri-account-pin-circle-fill fs-5"></i> View Profile</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </header>
+<!-- <------------------header-section-1-end------------------- -->
+
+<!-- <------------------nav-section-1-start------------------- -->
+
+    <nav class="nav-section-1">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container justify-content-evenly">
+                <a class="navbar-brand me-5" href="#">
+                    <img src="https://wordpress.vecurosoft.com/travolo/wp-content/uploads/2023/10/Logo.svg" alt="logo" width="180" height="80" class="d-inline-block align-text-top">
+                </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav nav-underline me-auto ms-5 ">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Hiking</a></li>
+                            <li><a class="dropdown-item" href="#">Trekking</a></li>
+                            <li><a class="dropdown-item" href="#">Camping</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Destinations
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Hiking</a></li>
+                            <li><a class="dropdown-item" href="#">Trekking</a></li>
+                            <li><a class="dropdown-item" href="#">Camping</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">About us</a></li>
+                            <li><a class="dropdown-item" href="#">Contact us</a></li>
+                            <li><a class="dropdown-item" href="#">Faq</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Team</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- <-------cart-search-icons-start---------> 
+                <button class="shopping-btn-div" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    <i class="ri-shopping-cart-fill fs-3 p-2"></i>
+                </button>
+                <button class="search-line border-0 p-2" src="https://cdn.lordicon.com/fkdzyfle.json" trigger="hover" colors="primary:#ffffff" style="width:50px;height:50px"  data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/fkdzyfle.json"
+                        trigger="hover"
+                        colors="primary:#ffffff"
+                        style="width:29px;height:29px;">
+                    </lord-icon>
+                </button>
+
+
+                <div class="modal" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                
+                                <!-- <---animated-search-icon------>
+                                <lord-icon class="search-cross-btn" data-bs-dismiss="modal" aria-label="Close" 
+                                src="https://cdn.lordicon.com/zxvuvcnc.json"
+                                trigger="hover"
+                                colors="primary:#ff681b"
+                                style="width: 50px; height: 50px; "
+                            ></lord-icon>
+
+                            <div class="modal-body">
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="search here..." aria-label="Search">
+                                </form>
+                            </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </nav>
+    </nav>
+<!-- <------------------nav-section-1-end------------------- -->
+
+<!-- <------------cart's off-canvas-------------- -->
+
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Your Cart</h5>
+                <lord-icon class="cart-cross-btn" data-bs-dismiss="offcanvas" aria-label="Close" 
+                    src="https://cdn.lordicon.com/zxvuvcnc.json"
+                    trigger="hover"
+                    style="width: 50px; height: 50px; position: absolute; top: 0%; left: 87%;"
+                ></lord-icon>
+        </div>
+        
+        <div class="offcanvas-body text-danger text-center">
+            <img src="images/Screen Recording 2024-07-09 at 22.32.10.gif" width="150px" height="160px">
+            <h1></h1>
+          <p>You have not added any items into the cart !!</p>
+        </div>
+      </div>
+<!-- <------------cart-off-canvas-end-------------- -->
+
+<!-- <---------------toggle menu-bar-start------------------- -->
+    <div class="navbar">
+        <div class="offcanvas-contain">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+<!-- <------------------toggle-menu-bar-end------------------- -->
+<section class="bg-light">
+<section class="slider-container p-0 mt-0">
+    <div class="sliderrr">
+      <!-- Carousel -->
+      <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators c-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+        </div>
+  
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner  c-main-inner">
+          <div class="carousel-item c-item active">
+            <img src="images copy/travel-slider-1.webp" alt="Los Angeles" class="d-block c-image w-100">
+            <div class="norway-container position-absolute mx-auto text-center">
+              <div class="card text-center bg-transparent border-0">
+                <div class="card-body card-ko-body">
+                  <h2 class="make-your">Make Your</h2>
+                  <h1 class="tour-amazing">Tour Amazing</h1>
+                  <p class="tour-amazing-p">Tick off two of Norway’s bucket list train<br> journeys. Drift past fjords and glaciers, ascending the steepest.</p>
+                  <button class="call_to_action_button tour-amazing-button px-4 py-2">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="images copy/travel-slider-2.webp" alt="Chicago" class="d-block c-image w-100">
+            <div class="norway-container position-absolute mx-auto text-center">
+              <div class="card text-center bg-transparent border-0">
+                <div class="card-body card-ko-body">
+                  <h2 class="black-friday">Black Friday</h2>
+                  <h1 class="friday-off">50% off</h1>
+                  <p class="friday-off-p">Tick off two of Norway’s bucket list train<br> journeys. Drift past fjords and glaciers, ascending the steepest.</p>
+                  <button class="call_to_action_button friday-off-button px-4 py-2">Shop Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="images copy/image copy 4.png" alt="New York" class="d-block c-image slider-open-acc-brigtness w-100">
+            <div class="open-acc-container  position-absolute mx-auto text-center">
+              <div class="card text-start bg-transparent border-0">
+                <div class="card-body card-ko-body">
+                  <button class="open-acc-butn px-5 py-3">OPEN AN ACCOUNT</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="images copy/tent-ss-1.png" alt="New York" class="d-block c-image slider-tent-brigtness w-100">
+            <div class="norway-container position-absolute mx-auto text-center">
+              <div class="card text-center bg-transparent border-0">
+                <!-- <div class="card-body card-ko-body">
+                  <h2>Norway</h2>
+                  <p>Tick off two of Norway’s bucket list train<br> journeys. Drift past fjords and glaciers, ascending the steepest.</p>
+                  <button class="call_to_action_button px-4 py-2">Book Now</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- Left and right controls/icons -->
+          <button class="carousel-control-prev span-button-1" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next span-button-1" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+    </div>
+</section>
+
+<!-- <-------offers-section----------->
+<section class="section-2-offers bg-light mt-5">
+  <div class="container-fluid p-lg-5 p-3">
+    <div class="row gx-2 row-cols-1 row-cols-lg-3 row-cols-md-1 row-cols-sm-1 g-1 text-center">
+      <div class="col-12 col-lg-6 col-md-6  h-100">
+        <div class="position-relative text-center h-100 mb-3">
+          <img src="images/offer-img-2.webp" class="img-fluid border-0 offer-col-hover" alt="...">
+          <div class="position-absolute card-body square-1 p-3 text-light">
+            <h5 class="card-title trekking-h5 mb-1">TREKKING</h5>
+            <h4 class="card-title all-products-h4 all-products-media mb-1">ALL PRODUCTS</h4>
+            <h2 class="card-title off-h2 mb-2">50% OFF</h2>
+            <a href="#" class="btn btn-light-shop-now">SHOP NOW</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3 col-md-3 col-sm-6  h-100">
+        <div class="position-relative h-100">
+          <img src="images/offer-img-2.0.webp" class="img-fluid border-0 offer-col-hover" alt="...">
+          <div class="position-absolute parallelogram p-3 text-light ">
+              <h4 class="card-title all-products-h4">Shoes</h4>
+              <p class="card-title fs-6 yellow-25off">25% OFF</p>
+              <a href="#" class="btn btn-dark-blue">SHOP NOW</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3 col-md-3 col-sm-6  h-100">
+        <div class="position-relative h-100">
+          <div class="card text-bg-dark border-0">
+            <img src="images/offer-img-3.0.webp" class="card-img offer-col-hover" alt="...">
+            <div class="card-img-overlay car-mathi-content">
+              <h5 class="card-title trekking-ct mb-0">Trekking</h5>
+              <h5 class="card-title trekking-ct mb-1">Bags</h5>
+              <a href="#" class="btn btn-bags-shop">SHOP NOW</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <-----owl-slider------------- -->
+<section class="backg-light">
+<div class="container owl-wala-slider d-flex align-items-center justify-content-center mt-sm-5 mb-0">
+    <div class="card text-center mb-3 border-0 mt-5" style="width: 28rem;">
+        <div class="card-body">
+          <img src="images/collection-3.png" class="card-img-top" width="120px" alt="collection">
+        </div>
+    </div>
+</div>
+</section>
+</section>
+
+<div class="owl-carousel owl-theme p-1">
+    <div class="item">
+        <div class="col col-ko-border">
+            <div class="card  border-0 h-100">
+              <div class="triangle-topright position-absolute"><span>New</span></div>
+              <img src="images/owl-7.webp" class="card-img-top" alt="...">
+              <div class="card-body bg-dark">
+                <h5 class="card-title text-light owl-text-h5">T & H Sunglasses</h5>
+                <a href="#" class="btn owl-butn px-3">See more</a>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="item ">
+        <div class="col col-ko-border">
+            <div class="card border-0 h-100">
+              <img src="images/owl-2.webp" class="card-img-top" alt="...">
+              <div class="card-body bg-dark">
+                <h5 class="card-title text-light owl-text-h5">Down jackets</h5>
+                <a href="#" class="btn owl-butn px-3">See more</a>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="col col-ko-border">
+            <div class="card border-0 h-100">
+              <img src="images/owl-3.webp" class="card-img-top" alt="...">
+              <div class="card-body bg-dark">
+                <h5 class="card-title text-light owl-text-h5">T & H Bottle</h5>
+                <a href="#" class="btn owl-butn px-3">See more</a>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="col col-ko-border">
+            <div class="card border-0 h-100">
+              <img src="images/owl-4.webp" class="card-img-top" alt="...">
+              <div class="card-body bg-dark">
+                <h5 class="card-title text-light owl-text-h5">T & H Poles</h5>
+                <a href="#" class="btn owl-butn px-3">See more</a>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="col col-ko-border">
+            <div class="card border-0 h-100">
+              <img src="images/owl-5.webp" class="card-img-top" alt="...">
+              <div class="card-body bg-dark">
+                <h5 class="card-title text-light owl-text-h5">T & H Bags</h5>
+                <a href="#" class="btn owl-butn px-3">See more</a>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="col col-ko-border">
+            <div class="card border-0 h-100">
+              <img src="images/owl-6.webp" class="card-img-top" alt="...">
+              <div class="card-body bg-dark">
+                <h5 class="card-title owl-text-h5">THC Tent</h5>
+                <a href="#" class="btn owl-butn px-3">See more</a>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+    <div class="card" aria-hidden="true">
+        <img src="images/image.png" class="card-img-top" alt="...">
+        <div class="loader">
+            <div class="justify-content-center jimu-primary-loading"></div>
+          </div>
+        <div class="card-body">
+          <h5 class="card-title placeholder-glow">
+            <span class="placeholder col-6"></span>
+          </h5>
+          <p class="card-text placeholder-glow">
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-8"></span>
+          </p>
+          <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- <--------fixed-image-container-START------> 
+<div class="container">
+    <img src="images/image copy.png" class="larger-image fixed-image">
+</div>
+
+
+<div class="container-fluid fluid-cont p-0">
+    <div class="card text-light card-ko-border border-0">
+        <div class="card-img card-ko-image pt-5 pb-5 ps-5">
+          <h5 class="card-title mt-3 trek-in-nepal-h5">Trek in Nepal x Travolo</h5>
+          <h3 class="card-title-1 annapurna-h3">Annapurna Basecamp</h5>
+          <p class="card-text p-display-none">Experience the glorious trek to Annapurna Base Camp, one of Nepal's classic short treks among spectacular high peaks, reaching an altitude of 4130m/13549ft!</p>
+          <button class="call_to_action_button px-4 py-2 mb-3">Book now</button>
+        </div>
+    </div>
+</div>
+<!-- <--------fixed-image-container-END-------> 
+
+<!-- <--------section-6-NEW-ARRIVALS--START--------> 
+<section class="section-6 mt-0  w-100">
+  <div class="container owl-wala-slider d-flex align-items-center justify-content-center mb-0">
+    <div class="card text-center mb-3 border-0" style="width: 24rem;">
+        <div class="card-body">
+          <img src="images/image copy 2.png" class="card-img-top" width="100px" alt="collection">
+        </div>
+    </div>
+  </div>
+
+  <!-- <-----new-arrivals-section-----> 
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-2 row-cols-md-2  d-flex align-items-top g-md-4">
+      <div class="col-12 col-lg-6 col-md-12 col-sm-12 p-0">
+        <img src="images/new-arrival-1.webp" alt="" class="img-fluid w-100">
+      </div>
+      <div class="col-md-12 col-sm-12 col-6 col-lg-6 col-12 gy-4">
+        <div class="row row-cols-2 row-cols-md-4 row-cols-lg-2 g-3 text-center">
+          <div class="col h-100">
+            <div class="card h-100 border-0 new-arrivals-animated-wala-hover">
+              <img src="images/torch-light.webp" class="card-img-top" alt="...">
+              <div class="card-body text-center h-100 new-arrival-card-body">
+                <h5 class="card-title card-title-ho">LED Torch Light</h5>
+                <p class="card-text mb-0 fw-bolder">$175.00</p>
+                <div class="rating">
+                  <input value="5" name="rating" id="star5" type="radio">
+                  <label for="star5"></label>
+                  <input value="4" name="rating" id="star4" type="radio">
+                  <label for="star4"></label>
+                  <input value="3" name="rating" id="star3" type="radio">
+                  <label for="star3"></label>
+                  <input value="2" name="rating" id="star2" type="radio">
+                  <label for="star2"></label>
+                  <input value="1" name="rating" id="star1" type="radio">
+                  <label for="star1"></label>
+                </div>
+                <div class="position-absolute products-card-hover">
+                  <i class="ri-links-fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to compare"></i>
+                  <i class="ri-heart-line" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to wishlist"></i>
+                  <i class="ri-search-line" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Quick Buy"></i>
+                </div>
+            
+              </div>
+            </div>
+          </div>
+          <div class="col h-100">
+            <div class="card h-100 border-0 new-arrivals-animated-wala-hover">
+              <img src="images/bag-2.webp" class="card-img-top" alt="...">
+              <div class="card-body h-100 new-arrival-card-body">
+                <h5 class="card-title card-title-ho">Hiking Backpack</h5>
+                <p class="card-text mb-0 fw-bolder">$1,123.00</p>
+                <div class="rating">
+                  <input value="5" name="rating" id="star5" type="radio">
+                  <label for="star5"></label>
+                  <input value="4" name="rating" id="star4" type="radio">
+                  <label for="star4"></label>
+                  <input value="3" name="rating" id="star3" type="radio">
+                  <label for="star3"></label>
+                  <input value="2" name="rating" id="star2" type="radio">
+                  <label for="star2"></label>
+                  <input value="1" name="rating" id="star1" type="radio">
+                  <label for="star1"></label>
+                </div>
+                <div class="position-absolute products-card-hover">
+                  <i class="ri-links-fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to compare"></i>
+                  <i class="ri-heart-line" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to wishlist"></i>
+                  <i class="ri-search-line" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Quick Buy"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col h-100">
+            <div class="card h-100 border-0 new-arrivals-animated-wala-hover">
+              <img src="images/bbq-3.webp" class="card-img-top" alt="...">
+              <div class="card-body h-100 new-arrival-card-body">
+                <h5 class="card-title card-title-ho">Barbecue Oven </h5>
+                <p class="card-text mb-0 fw-bolder">$1,570.00</p>
+                <div class="rating">
+                  <input value="5" name="rating" id="star5" type="radio">
+                  <label for="star5"></label>
+                  <input value="4" name="rating" id="star4" type="radio">
+                  <label for="star4"></label>
+                  <input value="3" name="rating" id="star3" type="radio">
+                  <label for="star3"></label>
+                  <input value="2" name="rating" id="star2" type="radio">
+                  <label for="star2"></label>
+                  <input value="1" name="rating" id="star1" type="radio">
+                  <label for="star1"></label>
+                </div>
+                <div class="position-absolute products-card-hover">
+                  <i class="ri-links-fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to compare"></i>
+                  <i class="ri-heart-line" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to wishlist"></i>
+                  <i class="ri-search-line" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Quick Buy"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col h-100">
+            <div class="card h-100 border-0 new-arrivals-animated-wala-hover">
+              <img src="images/uknown-4.webp" class="card-img-top" alt="...">
+              <div class="card-body h-100 new-arrival-card-body">
+                <h5 class="card-title card-title-ho">H&T Belay Device</h5>
+                <p class="card-text mb-0 fw-bolder">$657.00</p>
+                <div class="rating">
+                  <input value="5" name="rating" id="star5" type="radio">
+                  <label for="star5"></label>
+                  <input value="4" name="rating" id="star4" type="radio">
+                  <label for="star4"></label>
+                  <input value="3" name="rating" id="star3" type="radio">
+                  <label for="star3"></label>
+                  <input value="2" name="rating" id="star2" type="radio">
+                  <label for="star2"></label>
+                  <input value="1" name="rating" id="star1" type="radio">
+                  <label for="star1"></label>
+                </div>
+                <div class="position-absolute products-card-hover">
+                  <i class="ri-links-fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to compare"></i>
+                  <i class="ri-heart-line" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to wishlist"></i>
+                  <i class="ri-search-line" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Quick Buy"></i>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+<!-- <--------section-6-NEW-ARRIVALS--END--------> 
+
+<!-- <---------shop-with-us-START-------- -->
+<section class="shop-with-us-container mt-5">
+  <div class="container owl-wala-slider d-flex align-items-center justify-content-center mb-0">
+    <div class="card shop-card-no-bg text-center mb-3 border-0" style="width: 22rem;">
+        <div class="card-body mt-5">
+          <img src="images/image_copy_4-removebg-preview.png" class="card-img-top" width="90px" alt="collection">
+        </div>
+    </div>
+  </div>
+
+  <div class="container pb-5">
+      <div class="row bg-white-container">
+        <div class="col-2 bg-transparent py-5">
+          <div class="up_button">
+            <i class="ri-arrow-up-wide-fill"></i>
+          </div>
+          <div id="list-example" class="list-group">
+            <a class="list-group-item list-group-item-action active thumbnail d-flex align-items-center justify-content-center" href="#list-item-1"><img src="images/orange-tent.webp" width="80px" height="70px"></a>
+            <a class="list-group-item list-group-item-action thumbnail d-flex align-items-center justify-content-center" href="#list-item-2"><img src="images/blue-tent.webp" width="80px" height="70px"></a>
+            <a class="list-group-item list-group-item-action thumbnail d-flex align-items-center justify-content-center" href="#list-item-3"><img src="images/grey-tent.webp" width="80px" height="70px"></a>
+            <a class="list-group-item list-group-item-action thumbnail d-flex align-items-center justify-content-center" href="#list-item-4"><img src="images/green-tent.webp" width="80px" height="70px"></a>
+          </div>
+          <div class="down_button">
+            <i class="ri-arrow-down-wide-fill"></i>
+          </div>
+        </div>
+        <div class="col-6 p-5">
+          <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+            <img src="images/orange-tent.webp" class="card-img-top" id="featured">
+            <img src="images/orange-tent.webp" class="card-img-top">
+            <img src="images/orange-tent.webp" class="card-img-top">
+            <img src="images/orange-tent.webp" class="card-img-top">
+            <!-- <p>Content for Item 1...</p>
+            <h4 id="list-item-2">Item 2</h4>
+            <p>Content for Item 2...</p>
+            <h4 id="list-item-3">Item 3</h4>
+            <p>Content for Item 3...</p>
+            <h4 id="list-item-4">Item 4</h4>
+            <p>Content for Item 4...</p> -->
+          </div>
+        </div>
+        <div class="col-4 py-5">
+          <div class="card-body">
+            <h2 class="card-title big-sale-h2">BIG SALE TODAY</h2>
+            <p class="card-text get-30-off-p">Get 30% off on your order above $200</p>
+            <a href="#" class="btn shop-us-btn-orange">Shop Now</a>
+          </div>
+        </div>
+      </div>
+  </div>
+  <script>
+   
+  </script>
+
+</section>
+
+</section>
+<!-- <---------shop-with-us-END-------- -->
+  
+<!-- <-------services-section--- -->
+  <section class="section-5 w-100 pt-2">
+    <div class="container owl-wala-slider d-flex align-items-center justify-content-center mt-5">
+        <div class="card text-center mb-3 border-0" style="width: 24rem;">
+            <div class="card-body">
+              <img src="images/about-us-ko.png" class="card-img-top" width="100px" alt="collection">
+            </div>
+        </div>
+    </div>
+  
+    <div class="services-bg-class py-3 mt-4">
+      <div class="container text-center mt-5 col-row-ko-container">
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
+          <div class="col col-ko-hover">
+            <div class="p-2 pb-5">
+              <i class="ri-star-line fs-1"></i>
+              <p class="fs-5"><span class="num" data-val="200">000</span> Positive Reviews</p>
+            </div>
+          </div>
+          <div class="col col-ko-hover">
+            <div class="p-2">
+              <i class="ri-compass-3-fill fs-1"></i>
+              <p class="fs-5"><span class="num" data-val="400">000</span> Trekking Gears</p>
+            </div>
+          </div>
+          <div class="col col-ko-hover">
+            <div class="p-2 flex-wrap">
+              <i class="ri-earth-fill fs-1"></i>
+              <p class="fs-5"><span class="num" data-val="100">000</span> Hiking Gears</p>
+            </div>
+          </div>
+          <div class="col col-ko-hover">
+            <div class="p-2">
+              <i class="ri-heart-pulse-fill fs-1"></i>
+              <p class="fs-5"><span class="num" data-val="70">000</span> Destinations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- <div class="toast position-fixed top-50" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="images/bag-2.webp" width="40px" height="40px" class="rounded me-3" alt="...">
+      <strong class="me-auto">Travolo</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hiking backpack just sold out.
+    </div>
+</div> -->
+
+
+<!-- <section class="learning bg-dark">
+  <img src="images/blue-tent.webp" id="pic">
+
+  <br>
+  <button id="colorButton">Change color</button>
+</section> -->
+
+<script >
+  const btn = document.getElementById('colorButton');
+  const learningSection = document.querySelector('.learning');
+
+  function random(number) {
+    return Math.floor(Math.random() * (number+1));
+  }
+
+  btn.addEventListener('click', () => {
+    const r = random(255);
+    const g = random(255);
+    const b = random(255);
+    const rdnCol = 'rgb(${r}, ${g}, ${b})';
+    learningSection.style.backgroundColor = rdnCol;
+  });
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script>
+  // Smooth scroll behavior for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+<script>
+    var owl = $('.owl-carousel');
+owl.owlCarousel({
+    items:4,
+    loop:true,
+    margin:15,
+    autoplay:true,
+    responsiveClass:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
+    responsive: {
+            0: {
+                items: 2,
+                // Add other options if needed
+            },
+            480: {
+                items: 2,
+                // Add other options if needed
+            },
+            768: {
+                items: 3,
+                // Add other options if needed
+            },
+            1024: {
+                items: 4,
+                
+                // Add other options if needed
+            }
+        }
+    });
+$('.play').on('click',function(){
+    owl.trigger('play.owl.autoplay',[1000])
+})
+$('.stop').on('click',function(){
+    owl.trigger('stop.owl.autoplay')
+})
+</script>
+<script>
+    let valueDisplays = document.querySelectorAll(".num");
+  let interval = 1000;
+  
+  valueDisplays.forEach((valueDisplay) => {
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+    let duration = Math.floor(interval / endValue);
+    let counter = setInterval(function () {
+      startValue += 1;
+      valueDisplay.textContent = startValue;
+      if (startValue == endValue) {
+        clearInterval(counter);
+      }
+    }, duration);
+  });
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var toastEl = document.querySelector('.toast');
+            var toast = new bootstrap.Toast(toastEl);
+            toast.show();
+            
+            toastEl.addEventListener('hidden.bs.toast', function () {
+                toast.dispose();  // Prevent the toast from being re-initialized and shown again
+            });
+        });
+</script>
+
+<!-- <---for-tooltip-------> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+
+<!-- <section id="last-section bg-primary">
+  <div class="container bg-primary">
+    <div class="row row-cols-1 g-0 text-center">
+      <div class="col-6 col-md-6">
+        <ul class="list-group">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">A fourth item</li>
+          <li class="list-group-item">And a fifth one</li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-6">
+        <ul class="list-group">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">A fourth item</li>
+          <li class="list-group-item">And a fifth one</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+</body>
+</html>
